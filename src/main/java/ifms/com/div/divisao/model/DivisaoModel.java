@@ -16,7 +16,7 @@ public class DivisaoModel {
 
     }
     public Double getResultado(){
-        this.resultado = this.num1+ this.num2;
+        this.resultado = this.num1/ this.num2;
         return this.resultado;
 
     }

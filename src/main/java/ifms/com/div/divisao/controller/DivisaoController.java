@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ifms.com.div.divisao.model.DivisaoModel;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -13,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/divisao")
 public class DivisaoController {
 
-    @GetMapping(value="num1/{num1}/num2/{num2}")
-    public Double getSoma(@RequestParam String num1, @RequestParam String num2) {
+    @GetMapping("/num1/{num1}/num2/{num2}")
+    public Double getDivisao(@PathVariable String num1, @PathVariable String num2) {
      
         try {
             Double numero1 = Double.parseDouble(num1);
